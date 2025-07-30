@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 뷰어</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: #f9f3e8;
+      }
+      .viewer-container {
+      position: relative;
+      width: 1071px; /* 이미지 크기랑 같게 */
+    }
+
+    .base-image {
+      width: 100%;
+      display: block;
+    }
+
+    iframe {
+      position: absolute;
+      top: 270px;  
+      left: 435px; 
+      width: 700px;
+      height: 500px;
+      border: none;
+      z-index: 2;
+      background-color: transparent;
+    }
+    </style>
+  </head>
+  <body>
+    <img src="image/메인.png" usemap="#myMap" alt="예시이미지" />
+
+    <map name="myMap">
+      <area
+        shape="rect"
+        coords="64,93,252,141"
+        href="뉴욕.html"
+        target="imgFrame"
+        alt="뉴욕"
+      />
+      <area
+        shape="rect"
+        coords="317,85,499,143"
+        href="파리.html"
+        target="imgFrame"
+        alt="파리"
+      />
+      <area
+        shape="rect"
+        coords="564,90,750,142"
+        href="로마.html"
+        target="imgFrame"
+        alt="로마"
+      />
+      <area
+        shape="rect"
+        coords="813,89,955,144"
+        href="베이징.html"
+        target="imgFrame"
+        alt="베이징"
+      />
+    </map>
+
+    <iframe name="imgFrame" src="뉴욕.html" title="도시 이미지"></iframe>
+  </body>
+</html>
