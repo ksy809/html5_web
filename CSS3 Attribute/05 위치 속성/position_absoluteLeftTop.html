@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS3 Font Property</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+
+      /* 위치 값을 줬기 때문에 box 3개가 다 보임*/
+      .box:nth-child(1) {
+        background-color: red;
+        left: 10px;
+        top: 10px;
+      }
+
+      .box:nth-child(2) {
+        background-color: blue;
+        left: 50px;
+        top: 50px;
+      }
+
+      .box:nth-child(3) {
+        background-color: green;
+        left: 90px;
+        top: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+</html>

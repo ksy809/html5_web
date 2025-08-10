@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS3 Style Property Basic</title>
+    <style>
+      div {
+        font-family: "Times New Roman";
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+
+        /* 
+        구버전 브라우저 호환용 그라데이션
+        - background-color:      그라데이션 지원 안 하는 브라우저(단색 표시)
+        - -moz-linear-gradient:  파이어폭스 구버전(Firefox 3.6~15) 전용
+        - -webkit-linear-gradient: 크롬·사파리 구버전(Chrome 10~25, Safari 5.1~6) 전용
+        - filter:                인터넷 익스플로러 6~9 전용
+        ※ 현재(2025년) 대부분의 최신 브라우저에서는 표준 문법(linear-gradient)만으로 충분
+        */
+
+        /* Old browsers */
+        background-color: #f85032;
+        /* FF3.6+ */
+        background: -moz-linear-gradient(
+          top,
+          #f85032 0%,
+          #f16f5c 50%,
+          #f6290c 51%,
+          #f02f17 71%,
+          #e73827 100%
+        );
+        /* Chrome10-25, Safari5.1-6 */
+        background: -webkit-linear-gradient(
+          top,
+          #f85032 0%,
+          #f16f5c 50%,
+          #f6290c 51%,
+          #f02f17 71%,
+          #e73827 100%
+        );
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: linear-gradient(
+          to bottom,
+          #f85032 0%,
+          #f16f5c 50%,
+          #f6290c 51%,
+          #f02f17 71%,
+          #e73827 100%
+        );
+        /* IE6-9 */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f85032',endColorstr='#e73827', GradientType=0);
+        
+        background: linear-gradient(
+          to bottom,
+          #f85032 0%,
+          #f16f5c 50%,
+          #f6290c 51%,
+          #f02f17 71%,
+          #e73827 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>CSS3 그레이디언트</h1>
+    </div>
+  </body>
+</html>
